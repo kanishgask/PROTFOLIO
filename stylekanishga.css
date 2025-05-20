@@ -1093,111 +1093,21 @@ h2 {
     }
 }
 
-/* Gen/* General Body Styling */
-/* General Body Styling */
-body {
-    background-color: #000000;
-    /* Dark blue/black color */
-    color: rgb(0, 0, 0);
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Certificate Section */
-.certificate-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 50px 0;
-    background-color: #070b32;
-    /* Dark blue/black background */
-}
-
-/* Certificate Card Styling */
-.certificate-card {
-    background-color: #07b32;
-    /* Bright green for certificate card */
-    color: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    width: 80%;
-    max-width: 600px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-}
-
-/* Hover Effect for Certificate Card */
-.certificate-card:hover {
-    transform: scale(1.05);
-    /* Slight zoom effect */
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Certificate Heading */
-.certificate-card h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-/* Certificate Details */
-.certificate-card p {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-/* Button Styling */
-.download-btn {
-    background-color: #07b32;
-    /* Green color */
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-/* Hover Effect for Download Button */
-.download-btn:hover {
-    background-color: #077b32;
-    /* Slightly darker green */
-    transform: translateY(-2px);
-    /* Slight lift effect */
-}
-
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-    .certificate-card {
-        width: 90%;
-        padding: 30px;
-    }
-
-    .certificate-card h2 {
-        font-size: 28px;
-    }
-
-    .certificate-card p {
-        font-size: 16px;
-    }
-
-    .download-btn {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-}
-
+/* General Body Style */
 /* General Body Style */
 body {
     background-color: #1a1a1a;
     /* Dark background */
-    color: #000000;
+    color: #e0e0e0;
     /* Light text color */
     font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Header Section */
@@ -1205,6 +1115,7 @@ h2 {
     color: #00e676;
     /* Green color for headers */
     font-size: 2em;
+    text-align: center;
 }
 
 /* Tab buttons */
@@ -1217,6 +1128,7 @@ h2 {
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-right: 10px;
 }
 
 .tabs button:hover {
@@ -1240,13 +1152,14 @@ h2 {
     background-color: #2b2b2b;
     /* Dark background for tab content */
     border-radius: 8px;
+    margin-top: 20px;
 }
 
 .tab-content.active {
     display: block;
 }
 
-/* Certificate Gallery */
+/* Gallery Section */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -1262,9 +1175,14 @@ h2 {
     /* Green border around images */
 }
 
+/* Links inside images */
+a {
+    text-decoration: none;
+}
+
 /* Tabs container */
 .tabs {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-bottom: 20px;
 }
