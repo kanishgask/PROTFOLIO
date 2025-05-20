@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="stylekanishga.css">
+    <title>KANISHGA Portfolio</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                KANISHGA <span>SHANMUGAM</span>
+            </div>
+            <div class="links">
+                <div class="link"><a href="#home">Home</a></div>
+                <div class="link"><a href="#about">About</a></div>
+                <div class="link"><a href="#skills">Skills</a></div>
+
+                <div class="link"><a href="#certificates">Certificates</a></div>
+                <div class="link"><a href="#contact">Contact</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+
+                <a href="#certificates">Certificates</a>
+                <a href="#contact">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    <section id="home">
+        <div class="main-container">
+            <div class="image">
+                <a href="https://media.licdn.com/dms/image/v2/D4D03AQGQB1HkOdY1Cg/profile-displayphoto-shrink_800_800/B4DZY30v00HwAc-/0/1744693297704?e=1753315200&v=beta&t=mlZDYfNSNpISoVqbIspcSAEZNKWgwXYnIE_Vra2iPIk"
+                    target="_blank">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQGQB1HkOdY1Cg/profile-displayphoto-shrink_800_800/B4DZY30v00HwAc-/0/1744693297704?e=1753315200&v=beta&t=mlZDYfNSNpISoVqbIspcSAEZNKWgwXYnIE_Vra2iPIk"
+                        alt="KANISHGA SHANMUGAM">
+                </a>
+            </div>
+
+
+
+            <div class="content">
+                <h1>Hey, I'm <span>KANISHGA SHANMUGAM</span></h1>
+                <div class="typewriter">
+                    <span class="typewriter-text"></span>
+                    <label for="">|</label>
+                </div>
+                <p>Hello, and welcome to my portfolio! I’m Kanishga shanmugam, an aspiring Computer Science Engineer
+                    with a
+                    passion for technology and innovation. I’m currently pursuing my major at Rajalakshmi Institute of
+                    Technology, and I'm always exploring ways to leverage my skills in Cloud Computing, Full-Stack Web
+                    Development, and UI/UX Design to build impactful, user-friendly solutions..</p>
+                <div class="social-links">
+                    <a href="https://github.com/kanishgask"><i class="fa-brands fa-github"></i></a>
+
+
+                    <a href="https://www.linkedin.com/in/kanishga-shanmugam-7211a7283"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://leetcode.com/u/S_kanishga"><i class="fa-solid fa-code"></i></a>
+
+                    <a href="https://www.credly.com/users/kanishga-s"><i class="fa-solid fa-certificate"></i></a>
+                    <a href="http://www.skillrack.com/profile/474922/011fda50cff2bc23208dd89ece62d3caec6a9224">
+                        <i class="fa-solid fa-puzzle-piece"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="btn">
+                    <button>Hire Me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .about-container {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Segoe UI', sans-serif;
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .about-container h1 {
+            color: #077b32;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .about-container .intro {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .section {
+            background-color: #111;
+            border: 1px solid #077b32;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .section h2 {
+            margin: 0;
+            padding: 1rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+            background-color: #077b32;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-content {
+            padding: 1rem;
+            display: none;
+            background-color: #1a1a1a;
+            color: #ccc;
+        }
+
+        .section-content.open {
+            display: block;
+        }
+
+        .section-content ul {
+            padding-left: 1.2rem;
+        }
+
+        .section-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .icon {
+            transition: transform 0.3s ease;
+        }
+
+        .icon.rotate {
+            transform: rotate(90deg);
+        }
+
+        strong {
+            color: #077b32;
+        }
+    </style>
+
+    <div class="about-container">
+        <h1>About Me</h1>
+
+        <div class="intro">
+            Hello, I’m <strong>Kanishga</strong>—a computer‑science engineer with a CGPA of 9.1 who thrives at the
+            crossroads of
+            full‑stack development, cloud computing, UI/UX design, and cybersecurity. My journey spans multiple
+            internships and
+            real‑world projects, from building a secure multicloud management platform powered by machine‑learning
+            models to designing
+            REDCROSS Connect, a blood‑donation system, and an AI‑driven mental‑health monitoring tool.
+        </div>
+
+        <div class="section">
+            <h2 onclick="toggleSection(this)">
+                Skills & Tools
+                <i class="fa-solid fa-chevron-right icon"></i>
+            </h2>
+            <div class="section-content">
+                <ul>
+                    <li>Languages: C, C++, Python, Java, SQL</li>
+                    <li>Frameworks: React, Node.js, Express</li>
+                    <li>Tools: Figma, GitHub, MongoDB, Power BI</li>
+                    <li>Cloud: Google Cloud Platform (21 badges), AWS (simulation project)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 onclick="toggleSection(this)">
+                Achievements
+                <i class="fa-solid fa-chevron-right icon"></i>
+            </h2>
+            <div class="section-content">
+                <ul>
+                    <li>Solved 1,000+ problems on SkillRack</li>
+                    <li>Won multiple coding & math competitions</li>
+                    <li>Participated in national hackathons and paper presentations</li>
+                    <li>Completed internships with Accenture, Deloitte, TechnoHacks, and more</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 onclick="toggleSection(this)">
+                Projects
+                <i class="fa-solid fa-chevron-right icon"></i>
+            </h2>
+            <div class="section-content">
+                <ul>
+                    <li>REDCROSS Connect – Blood Donation Management System</li>
+                    <li>AI-Powered Mental Health Monitoring System</li>
+                    <li>Secure Multicloud Management Using ML Models</li>
+                    <li>Steganography-based Secure Data Hiding</li>
+                    <li>Food Delivery App (UI/UX Design)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 onclick="toggleSection(this)">
+                Career Goals
+                <i class="fa-solid fa-chevron-right icon"></i>
+            </h2>
+            <div class="section-content">
+                <p>
+                    I aspire to work in innovative environments where I can apply my engineering mindset, develop
+                    scalable tech
+                    solutions, and grow as a full-stack/cloud developer. I aim to contribute to projects that make
+                    real-world impact
+                    while constantly evolving my skills in AI, data science, and cybersecurity.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(header) {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.icon');
+            content.classList.toggle('open');
+            icon.classList.toggle('rotate');
+        }
+    </script>
+
+
+    <!-- Separate Skills Section/Page -->
+    <section id="skills-page">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <!-- Skill 1: HTML -->
+            <div class="skill">
+                <h3>HTML</h3>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="90"></div>
+                </div>
+                <p>90%</p>
+            </div>
+
+            <!-- Skill 2: CSS -->
+            <div class="skill">
+                <h3>CSS</h3>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="85"></div>
+                </div>
+                <p>85%</p>
+            </div>
+
+            <!-- Skill 3: Java -->
+            <div class="skill">
+                <h3>Java</h3>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="90"></div>
+                </div>
+                <p>90%</p>
+            </div>
+
+            <!-- Skill 4: JavaScript -->
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="75"></div>
+                </div>
+                <p>75%</p>
+            </div>
+
+            <!-- Skill 5: C++ -->
+            <div class="skill">
+                <h3>C++</h3>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="85"></div>
+                </div>
+                <p>85%</p>
+            </div>
+
+            <!-- Skill 6: C -->
+            <div class="skill">
+                <h3>C</h3>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="85"></div>
+                </div>
+                <p>85%</p>
+            </div>
+
+            <!-- Skill 7: Python -->
+            <div class="skill">
+                <h3>Python</h3>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="80"></div>
+                </div>
+                <p>80%</p>
+            </div>
+
+            <!-- Skill 8: Data Structures -->
+            <div class="skill">
+                <h3>Data Structures</h3>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="70"></div>
+                </div>
+                <p>90%</p>
+            </div>
+
+            <!-- Skill 9: MongoDB -->
+            <div class="skill">
+                <h3>MongoDB</h3>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="85"></div>
+                </div>
+                <p>85%</p>
+            </div>
+
+            <!-- Skill 10: SQL -->
+            <div class="skill">
+                <h3>SQL</h3>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="65"></div>
+                </div>
+                <p>65%</p>
+            </div>
+
+            <!-- Skill 11: React -->
+            <div class="skill">
+                <h3>React</h3>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="80"></div>
+                </div>
+                <p>80%</p>
+            </div>
+
+            <!-- Skill 12: Node.js -->
+            <div class="skill">
+                <h3>Node.js</h3>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="75"></div>
+                </div>
+                <p>75%</p>
+            </div>
+
+            <!-- Skill 13: Express.js -->
+            <div class="skill">
+                <h3>Express.js</h3>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="70"></div>
+                </div>
+                <p>70%</p>
+            </div>
+
+            <!-- Skill 14: Git -->
+            <div class="skill">
+                <h3>Git</h3>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="85"></div>
+                </div>
+                <p>85%</p>
+            </div>
+
+            <!-- Skill 15: Docker -->
+            <div class="skill">
+                <h3>Docker</h3>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="60"></div>
+                </div>
+                <p>60%</p>
+            </div>
+
+            <!-- Skill 16: AWS -->
+            <div class="skill">
+                <h3>AWS</h3>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="70"></div>
+                </div>
+                <p>70%</p>
+            </div>
+
+            <!-- Skill 17: Firebase -->
+            <div class="skill">
+                <h3>Firebase</h3>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="65"></div>
+                </div>
+                <p>65%</p>
+            </div>
+
+            <!-- Skill 18: MongoDB -->
+            <div class="skill">
+                <h3>MongoDB</h3>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="75"></div>
+                </div>
+                <p>75%</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include the Script for Progress Bar Animation -->
+    <script>
+        window.addEventListener('load', () => {
+            const progressBars = document.querySelectorAll('.progress');
+            progressBars.forEach((bar) => {
+                const progressValue = bar.getAttribute('data-progress');
+                bar.style.width = ${ progressValue }%;
+            });
+        });
+    </script>
+
+
+
+
+
+
+    <section id="certificates" class="certificates-section">
+        <h2>📜 My Certifications</h2>
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('courses')">Courses</button>
+            <button class="tab" onclick="showTab('internships')">Internships</button>
+            <button class="tab" onclick="showTab('participation')">Participation</button>
+            <button class="tab" onclick="showTab('awards')">Awards</button>
+            <button class="tab" onclick="showTab('badges')">Skill Badges</button>
+        </div>
+
+        <!-- Course Certificates -->
+        <div id="courses" class="tab-content active">
+            <h3>📘 Course Certificates</h3>
+            <div class="gallery">
+                <img src="https://media.licdn.com/dms/image/v2/D4D22AQHGGwSLk-jsxg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1709820785941?e=1750896000&v=beta&t=1a7KEhrlgYDkJfNlE8Y78WQK5ibNg_0zOUkt8kOATU0"
+                    alt="C Programming">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQE3e7O_qL-VTg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1703174151948?e=1750896000&v=beta&t=jUpk8aA4Npku857D5AZvg-_s2YUPnMdsEwstpUmGcEM"
+                    alt="C++ Programming">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQH1C_1qbE5CVw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1721987720325?e=1750896000&v=beta&t=-9hCO-Uu8Vl-9w4fUyLHLiQnAplOz37p761ISUYKPu4"
+                    alt="Java & OOPs">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQGm4v702Eh9Sg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1722691281669?e=1750896000&v=beta&t=kxHAjbYyL6ax56vZTCXggjrdpL1ZbuNfAB6HP-IqOo0"
+                    alt="Python">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQHKN5fqOae3FA/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1723211515629?e=1750896000&v=beta&t=foLKDYSEXTWYIP9-RHJgW6UWqjfXrR62a6vvr8BRSdI"
+                    alt="Oops">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQGHzJbX7V2P2g/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1726571508015?e=1750896000&v=beta&t=XiyXfKXyxyEMNTwByAQCBhZtCHbIFgsCz0Q08QvXcM0"
+                    alt="HTML">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQGc2CSiwODY0Q/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1726570753699?e=1750896000&v=beta&t=wRjO0QA_eggQN9EzWvOVZTAQk-GR7R_tztwlVcR5Q9I"
+                    alt="CSS">
+
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQEyWmCJda52uw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1726570606970?e=1750896000&v=beta&t=JaHmcvkPJjT_8XwtrgGpvKi_3Ev2n4XpS6ffavDNGMs"
+                    alt="Data Structures">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQGcQANh0oi8Rw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1726570467912?e=1750896000&v=beta&t=0Q4WxNkAw_yrHN6tr6jz2JemW5ppo_LuUI3YQZxfAxk"
+                    alt="DBMS">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQE-7WKzJsEjsA/feedshare-shrink_800/feedshare-shrink_800/0/1723822774491?e=1750896000&v=beta&t=jQ7F0bD_CofaJr6tF8dUFRJefYg4PJ9XkLpWAUd357A"
+                    alt="Operating Systems">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQF-U7l-dyW6FQ/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1722357588573?e=1750896000&v=beta&t=I_tqYfX72AEsujoaLHC_x8lF99ilB4vh33Kewr24_fk"
+                    alt="AI">
+
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQGsmEpu_GjDQQ/feedshare-shrink_800/feedshare-shrink_800/0/1722076568803?e=1750896000&v=beta&t=ydOe6fdadAahqZnpt3_LP0kZdT4By0XGT2zFEfboti8"
+                    alt="NLP">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQHIvYAIjK2s2Q/feedshare-shrink_800/feedshare-shrink_800/0/1721987899432?e=1750896000&v=beta&t=jcP1OxSSejwGTVGCi-SP55LBmTbVZaWTFOsivHhLAhQ"
+                    alt="MongoDB">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQG1g6WCQdC26A/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1731566690509?e=1750896000&v=beta&t=r3jM4JeJLQonN6QMXYO2GK0HiIpStofKtWJmMAM7X60"
+                    alt="Code gallata">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQFE_pkVLUyDAA/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1717685723990?e=1750896000&v=beta&t=3X_PJ7VuwSbkCgVOvBuil0CCX8vHl3LekREwWokva28"
+                    alt="Image Recognition">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQGYtHAB1EHvZA/feedshare-shrink_1280/B56ZSmqjVXHEAo-/0/1737962960823?e=1750896000&v=beta&t=twr74jftcA8EzGVZAyU-9d2CFj1jmA2EfTA0HfkrZcQ"
+                    alt="Cybersecurity">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQGYtHAB1EHvZA/feedshare-shrink_1280/B56ZSmqjVXHEAo-/0/1737962960823?e=1750896000&v=beta&t=twr74jftcA8EzGVZAyU-9d2CFj1jmA2EfTA0HfkrZcQ"
+                    alt="Cybersecurity">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQFjYCdHNiPd-w/feedshare-shrink_800/feedshare-shrink_800/0/1716043431304?e=1750896000&v=beta&t=3LwK7leBqp_cCWKn-ro6bhcUW2m3RJRN795A0fVczoE"
+                    alt="Design thinking ">
+
+
+            </div>
+        </div>
+
+
+
+        <!-- Participation Certificates -->
+        <div id="participation" class="tab-content">
+            <h3>🏅 Participation</h3>
+            <div class="gallery">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQEqcuPspgokgw/feedshare-shrink_800/feedshare-shrink_800/0/1700490870808?e=1750896000&v=beta&t=fVFtkuCegC8mVeFdo5idt89VSoxaUaASV2jyAghQDwc"
+                    alt="Chandrayaan 3">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQEDzqeJfeWs3w/feedshare-shrink_800/feedshare-shrink_800/0/1728884920108?e=1750896000&v=beta&t=-gmNSR8Xkl5gmuj280BnNtuLcXOEcOIagfiRgiF0P6c"
+                    alt="Mathematical sequence">
+                <img src="https://media.licdn.com/dms/image/v2/D4D22AQG9ThngqlKo5Q/feedshare-shrink_800/feedshare-shrink_800/0/1709821006139?e=1750896000&v=beta&t=OQa8ALYk7ZtER6DIPdQx8---jcf6kZEtrs6q2fyW-oU"
+                    alt="Viksit bharat">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQELMbMIBp2CDA/feedshare-shrink_800/feedshare-shrink_800/0/1710853257536?e=1750896000&v=beta&t=WZ3noLQofrbXWtTItkaR9PsEVZmvpiFdaZY2FPU5bYM"
+                    alt="Power Bi workshop">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQFXKHsOmaKxQA/feedshare-shrink_1280/feedshare-shrink_1280/0/1727792170445?e=1750896000&v=beta&t=BgFxmvttoPYIoFe8s_HQiJQfqhppFRRmzyHaRaKUd58"
+                    alt="Cit paper presetation ">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQFi3tYe2Bhqgw/feedshare-shrink_800/feedshare-shrink_800/0/1733580778597?e=1750896000&v=beta&t=6z9Pf8W_7DQwsm51-UHFY6Mbpf59kUMEcI9u7EP4xms"
+                    alt="Ilets preparation workshop ">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQFDyaSkZWLZVQ/feedshare-shrink_800/feedshare-shrink_800/0/1733580754668?e=1750896000&v=beta&t=DiaraSK2FD6pDbL50mVAd4kF-xI9dVhi25eHL282Iz0"
+                    alt="Git github bootcamp">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQFyPPN09w9yTg/feedshare-shrink_800/feedshare-shrink_800/0/1733580708878?e=1750896000&v=beta&t=uEL1zfeUTmyew1rgopHr2rDxfHM67MFw-kcCO_pWJqI"
+                    alt="FIGMA bootcamp">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQG3B6wgO7iZrQ/feedshare-shrink_800/feedshare-shrink_800/0/1703173910128?e=1750896000&v=beta&t=CvRyqP4alF-FbzFivhsIfz-2mkRRq3NR4-IcfRaGbJ8"
+                    alt="Veltech paper presetation ">
+
+                <img src="https://media.licdn.com/dms/image/v2/D4D22AQGAjjoifm6H9A/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1704300449581?e=1750896000&v=beta&t=zEeUUstGqh4JvWjqcFe-tAHKViRa-IN-4EMy8ZqU-l4"
+                    alt="SRM Certificate">
+            </div>
+
+        </div>
+
+        <!-- Skill Badges -->
+        <div id="badges" class="tab-content">
+            <h3>🛡 Cloud & Skill Badges</h3>
+            <div class="gallery">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQGUBX1DVSp--g/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1711301405440?e=1750896000&v=beta&t=dDpMqZgyWtt7wELNOd7huSh_TLGRfMz5mRfmlEDTONc"
+                    alt="Google Cloud Badge 1">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQEPiXZB5VzMog/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1716043533319?e=1750896000&v=beta&t=3_HPgE8snnM8JM3r19bE11J0_dPTWqPzf4YWqM-hnZw"
+                    alt="Google Cloud Badge 2">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQGucefJGtKBHQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1729519462069?e=1750896000&v=beta&t=ZK4XfbN_-vfDdzN3m9WXHasWpBhDmtXUr4_mPkGPQXo"
+                    alt="Power BI Badge">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQETtF-TIuDO9Q/feedshare-shrink_1280/feedshare-shrink_1280/0/1729519462834?e=1750896000&v=beta&t=xGbTHjW4V-oqDV9ZVJuAk1jRLZWEKiFmaktM89Veqxk"
+                    alt="SkillRack Badge">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQFoXM-Z2kDv5g/feedshare-shrink_1280/feedshare-shrink_1280/0/1729519461766?e=1750896000&v=beta&t=M44cGWib0NANxOeFzArhfDExFhh2-nOTS1WZWjFtRIk"
+                    alt="SkillRack Badge">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQF52y-7DLdDDw/feedshare-shrink_1280/feedshare-shrink_1280/0/1729519462040?e=1750896000&v=beta&t=Dxg_QAp5xqFt4i9VrhZJNVBWVzEjenuX35BgyhgzWWU"
+                    alt="SkillRack Badge">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQGV9cQz1CDXhw/feedshare-shrink_800/feedshare-shrink_800/0/1729519462148?e=1750896000&v=beta&t=tsMCNO2t_FrnHmAsdCwdp24v3Hf_s2dwzVHlPSk52o0"
+                    alt="SkillRack Badge">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQEAI5wakmVaQg/feedshare-shrink_800/feedshare-shrink_800/0/1729519463026?e=1750896000&v=beta&t=eARVDrxByzBJXhBx_4GB03zRrw-uXL9CaoeZSFyvk9U"
+                    alt="SkillRack Badge">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQEBlF0gEQ883g/feedshare-shrink_1280/feedshare-shrink_1280/0/1729519462003?e=1750896000&v=beta&t=9k66msvow8ORi-ZaUcuSlOJCUbZ2SVcifT2Hjqzyv1U"
+                    alt="SkillRack Badge">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQG9qafLpvVLhw/feedshare-shrink_800/feedshare-shrink_800/0/1729519463231?e=1750896000&v=beta&t=zWqBHwaYOsVTTLeA5Z2L7hRkwKeRLaf609QgBdP03ao"
+                    alt="SkillRack Badge">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQERkREm6lwW_w/feedshare-shrink_1280/feedshare-shrink_1280/0/1729519462929?e=1750896000&v=beta&t=_j-KijSZhVdZnMItNLIrIOuy8AsInTVigX8yGs1l8pc"
+                    alt="SkillRack Badge">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQGlIUOwfXVsMw/feedshare-shrink_800/feedshare-shrink_800/0/1729519462879?e=1750896000&v=beta&t=I4jqkApRHIL1vIdcr-LWL9QtKpBz-JM5j4DcbsASlHw"
+                    alt="SkillRack Badge">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQHsezSK4d6-ew/feedshare-shrink_1280/feedshare-shrink_1280/0/1729519462902?e=1750896000&v=beta&t=rto33yzvJTgzoYfM5UU3z4uGcLOwGj_nvZ7NXSkWnDk"
+                    alt="SkillRack Badge">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQGhtC0U8GWNaA/feedshare-shrink_800/feedshare-shrink_800/0/1729519463380?e=1750896000&v=beta&t=RKNIGaC0LeDEwMtl3zyyOCPWY4BZykR5h5hNVOQQiG4"
+                    alt="SkillRack Badge">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQHzdQn-0PQNGw/feedshare-shrink_1280/feedshare-shrink_1280/0/1729519463056?e=1750896000&v=beta&t=ygKUImkzAWHqXLvhhmU-fabvmGi2M4yor8gxRJ1Vt4A"
+                    alt="SkillRack Badge">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQFRWjhnvkS8_g/feedshare-shrink_1280/feedshare-shrink_1280/0/1729519463490?e=1750896000&v=beta&t=U16vERJGMTW1K8KmP654-HGxQIzfScH4hY0d1nVzGD4"
+                    alt="SkillRack Badge">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQHz6HK3MLc6jg/feedshare-shrink_1280/feedshare-shrink_1280/0/1729519463467?e=1750896000&v=beta&t=AjleOIK1gnBK-BifEPXCCs19pGIDrj87BFRaHFWYQ7Q"
+                    alt="SkillRack Badge">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQGucefJGtKBHQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1729519462069?e=1750896000&v=beta&t=ZK4XfbN_-vfDdzN3m9WXHasWpBhDmtXUr4_mPkGPQXo"
+                    alt="SkillRack Badge">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQETtF-TIuDO9Q/feedshare-shrink_1280/feedshare-shrink_1280/0/1729519462834?e=1750896000&v=beta&t=xGbTHjW4V-oqDV9ZVJuAk1jRLZWEKiFmaktM89Veqxk"
+                    alt="SkillRack Badge">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQFlf6nmS2ckRg/feedshare-shrink_1280/B56ZSmqjVrGsAk-/0/1737962960766?e=1750896000&v=beta&t=wQftePXTUpQ-N-OWuFB9Qf4fV1_w8-JnnNWpqlma4oo"
+                    alt="SkillRack Badge">
+                <img src="https://images.credly.com/size/680x680/images/1aa38026-5e9d-45f5-becc-288601568ad5/image.png"
+                    alt="SkillRack Badge">
+            </div>
+        </div>
+        <!-- Awards -->
+        <div id="awards" class="tab-content">
+            <h3>🏆 Awards & Achievements</h3>
+            <div class="gallery">
+
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQEbCYUodqMvVA/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1719722635068?e=1750896000&v=beta&t=BfL3rgsxQTna21FFmGtQ59GKDLyQzrWSBJCNB50rh2I"
+                    alt="WRCA Record">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQEFBja25UGjpA/feedshare-shrink_800/B56ZO_C3MnHIAg-/0/1734077020813?e=1750896000&v=beta&t=bHbWHFSOMBlcxy9XPZYlo5geH9d22zfDAl1YO9cV6pc"
+                    alt="School Topper">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQE-7WKzJsEjsA/feedshare-shrink_800/feedshare-shrink_800/0/1723822774491?e=1750896000&v=beta&t=jQ7F0bD_CofaJr6tF8dUFRJefYg4PJ9XkLpWAUd357A"
+                    alt="Throwball Winner">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQFRlySf97mPkw/feedshare-shrink_800/feedshare-shrink_800/0/1722690931882?e=1750896000&v=beta&t=K250zKELJxcc7KgWInS2XMiW198MsL5efi53oX2YMVM"
+                    alt="Essay Winner">
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQGEaYf2DMxAmg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1722003365405?e=1750896000&v=beta&t=INHTkN-uL7S7NTWME82HV2I7kLaaKfYJBxyBs0WQjgM"
+                    alt="Sudoku Winner">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQHfuSY9ujxYQQ/feedshare-shrink_800/feedshare-shrink_800/0/1716129963579?e=1750896000&v=beta&t=fZkmA-nkIXze5MFC1LdiiEmbNF30vWBa92qPARsStnE"
+                    alt="SQL Quiz 2nd">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQGzmAMEDVcheA/feedshare-shrink_800/feedshare-shrink_800/0/1716129962342?e=1750896000&v=beta&t=3nuiEJM3rHpniL-sW_rH8CJmf-V8eb1KyDOJAzO-OvI"
+                    alt="Sequence 3rd">
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQEvQ_NoZysDsQ/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1722003365825?e=1750896000&v=beta&t=941YBFcN6rWO8Y1D3ABixa2SEKrFMG7nXW7KU_FJXSY"
+                    alt="SSN Math 3rd">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQGw-zZ6i0DfsQ/feedshare-shrink_800/B56ZWjrWltHQAg-/0/1742207806714?e=1750896000&v=beta&t=rZm-k_9-arICkV4zfHhUzYrOxozelMtPg31rTtGU0Dg"
+                    alt="SSN Math 3rd">
+            </div>
+        </div>
+        <!-- Internship Certificates -->
+        <div id="internships" class="tab-content">
+            <h3>💼 Internship Certificates</h3>
+            <div class="gallery">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQEGh1sdqfPfLQ/feedshare-shrink_2048_1536/B56ZWkKrBmGoAo-/0/1742216016962?e=1750896000&v=beta&t=gUk8a8GaOAx677unewoDp0aaU4CKORWejCJCyDw8Cdg"
+                    alt="AICTE Cybersecurity">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQFktkgfcxuwRQ/feedshare-shrink_1280/B56ZRIzvA_GQAk-/0/1736388312187?e=1750896000&v=beta&t=v7SzMnbruMo8AnIvJ0x0OkJtrbMiRWCgz9voiVS1U24"
+                    alt="InternPe Web Dev">
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQGcP25Md4X0gg/feedshare-shrink_800/feedshare-shrink_800/0/1722003423305?e=1750896000&v=beta&t=IJ-73ue-GpiTYoOumc1zBugUtwdGY2njLitsFqhc6yY"
+                    alt="Sparks Foundation Web Dev">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQFv-QRW8uvwLw/feedshare-shrink_1280/B56ZWnlLyfHsAk-/0/1742273299908?e=1750896000&v=beta&t=OIIx35uU0_m9FzFO502WqHgfPe30fUDQvrafP91Cais"
+                    alt="Agnivra space internship ">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQFyPPN09w9yTg/feedshare-shrink_800/feedshare-shrink_800/0/1733580708878?e=1750896000&v=beta&t=uEL1zfeUTmyew1rgopHr2rDxfHM67MFw-kcCO_pWJqI"
+                    alt="UI/UX Internship">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQEeDnw9vuqwXg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1717491970452?e=1750896000&v=beta&t=NvEuTno_dKy-GPquh7UJWvGBgZfg8zKjA0UjIHvbV-o"
+                    alt="CodSoft Python">
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Me</h2>
+                <p>If you have any questions or want to get in touch, feel free to reach out via the form below or visit
+                    me at my location.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p>kanishga.s.2023.cse@ritchennai.edu.in</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Phone</h3>
+                        <p>6379984398</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Location</h3>
+                        <p>NO 17 mosque back side kovilpathagai avadi chennai 62</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Get In Touch</h3>
+                <form id="contact-form" action="#" method="POST">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="map-container">
+            <h3>Find Me Here</h3>
+            <!-- Embed Google Map iframe -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.201209263548!2d-74.00601538474559!3d40.712776979330836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a2fd1ec8b3b%3A0xa0eeb6270a3f5b90!2sNew%20York%20City%2C%20NY%2010007%2C%20USA"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="scriptpro.js"></script>
+</body>
+
+</html>
